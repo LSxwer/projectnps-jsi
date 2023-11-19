@@ -1,63 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="test.css">
 </head>
+</head>
+
 <body>
-    <header>
-        <a href="#" class="logo">spck</a>
-        
-        
-        <ul class="navlist">
-            <li><a href="#">Home </a></li>
-            <li><a href="#">Music</a></li>
-            <li><a href="#">Dev</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li> 
-        </ul>
-        
-        <div class="bx bx-menu" id="menu-icon"></div>
-        <div class="login-container">
-            <div class="aside-right">
-              <div class="header">
-                <h3>Login</h3>
-              </div>
-        
-              <form id="login-form">
-        
-                <div class="input-wrapper">
-                  <input type="email" name="email" placeholder="Input email ...">
-                  <div class="error" id="email-error"></div>
-                </div>
-        
-                <div class="input-wrapper">
-                  <input type="password" name="password" placeholder="input password ....">
-                  <div class="error" id="password-error"></div>
-                </div>
-        
-                <div class="form-action">
-                  <span class="cursor" id="redirect-to-register">
-                    Don't have an account? Register
-                  </span>
-        
-                  <button class="btn" type="submit">
-                    login
-                  </button>
-                </div>
-        
-              </form>
-            </div>
-          </div>
-    </header>
+    <div id="player">
+        <audio id="audio" controls></audio>
+        <div id="controls">
+            <button id="play-pause">Play</button>
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <div id="playlist">
+            <ul>
+                <li><a href="Skibidi Toilet Full Song Music Video.mp3">Song 1</a></li>
+                <li><a href="song2.mp3">Song 2</a></li>
+                <li><a href="song3.mp3">Song 3</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
+
+    <script src="script.js"></script>
 </html>

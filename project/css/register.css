@@ -1,0 +1,28 @@
+#register-form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background-color: rgb(4,118,249, .5);
+  padding: 100px;
+  z-index: 100;
+}
+
+#register-form h3 {
+    text-align: center  ;
+}
+.register-container .aside-right .input-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.register-container .input-name-wrapper .input-wrapper {
+  width: 48%;
+}
+
+#register-form {
+  padding: 20px;
+}
+
