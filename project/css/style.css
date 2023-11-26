@@ -21,8 +21,8 @@ header {
 }
 
 body{
-    background-image: url(https://wallpapers.com/images/featured/christmas-wywv98mcv9rtgyqa.jpg) ;
     background-repeat:  no-repeat;
+    background-image: url(https://wallpapers.com/images/featured/christmas-wywv98mcv9rtgyqa.jpg)
 }
 
 .logo {
@@ -67,6 +67,7 @@ body{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap : 2rem;
+
 }
 
 section {

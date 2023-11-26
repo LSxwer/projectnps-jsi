@@ -14,6 +14,13 @@ const init = () => {
   firebase.initializeApp(firebaseConfig);
     
   view.setActiveScreen("mainscreen");
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      view.setActiveScreen("rmain");
+    } else {
+      view.setActiveScreen("mainscreen");
+    }
+  });
 
 }
 

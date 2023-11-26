@@ -1,55 +1,16 @@
-const audioElement = document.getElementById('audio');
-const playPauseButton = document.getElementById('play-pause');
-const previousButton = document.getElementById('previous');
-const nextButton = document.getElementById('next');
-const playlistElement = document.getElementById('playlist');
+const data = null;
 
-let currentSongIndex = 0;
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
-playPauseButton.addEventListener('click', function() {
-    if (audioElement.paused) {
-        audioElement.play();
-        playPauseButton.textContent = 'Pause';
-    } else {
-        audioElement.pause();
-        playPauseButton.textContent = 'Play';
-    }
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
 });
 
-previousButton.addEventListener('click', function() {
-    if (currentSongIndex > 0) {
-        currentSongIndex--;
-        updateSong();
-    }
-});
+xhr.open('GET', 'https://spotify23.p.rapidapi.com/search/?q=%3CREQUIRED%3E&type=multi&offset=0&limit=10&numberOfTopResults=5');
+xhr.setRequestHeader('X-RapidAPI-Key', 'a568f8e404mshe6cd3ddc4962405p1fc956jsn94cec1132327');
+xhr.setRequestHeader('X-RapidAPI-Host', 'spotify23.p.rapidapi.com');
 
-nextButton.addEventListener('click', function() {
-    if (currentSongIndex < playlistElement.children[0].children.length - 1) {
-        currentSongIndex++;
-        updateSong();
-    }
-});
-
-playlistElement.addEventListener('click', function(event) {
-    if (event.target.tagName === 'A') {
-        currentSongIndex = parseInt(event.target.parentNode.getAttribute('data-index'));
-        updateSong();
-    }
-});
-
-function updateSong() {
-    const playlistItems = playlistElement.children[0].children;
-    const currentSong = playlistItems[currentSongIndex];
-    const songTitle = currentSong.textContent;
-    const songURL = currentSong.getAttribute('href');
-
-    audioElement.src = songURL;
-    audioElement.play();
-    playPauseButton.textContent = 'Pause';
-
-    playlistItems.forEach(function(item) {
-        item.classList.remove('active');
-    });
-
-    currentSong.classList.add('active');
-}
+xhr.send(data);

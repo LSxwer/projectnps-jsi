@@ -9,7 +9,7 @@ model.register =  async (data) => {
 
         //gui email ve de sat thuc
         firebase.auth().currentUser.sendEmailVerification();
-        alert("EMAIL DA DUOC BEO XAC NHAN , CHECK EMAIL DE ANH BEL NAU COM")
+        alert("Email Sent!")
 
         //hien thi giao dien trang dang nhap 
         view.setActiveScreen("loginScreen")
@@ -34,7 +34,7 @@ model.login = async (dataLogin) => {
                 email : response.user.email
             }   
 
-            view.setActiveScreen("mainscreen")
+            
         }
 
     }

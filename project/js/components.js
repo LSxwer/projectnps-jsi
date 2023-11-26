@@ -5,7 +5,7 @@ components.mainscreen =  `    <header>
 
 <ul class="navlist">
     <li id="redirect-to-home"><a href="#">Home </a></li>
-    <li><a href="#">Music</a></li>
+    <li id="music"><a href="">Music</a></li>
     <li><a href="#">Dev</a></li>
     <li id="redirect-to-login"><a href="#">Login</a></li>
     <li id="redirect-to-register"><a href="#">Register</a></li>
@@ -32,7 +32,7 @@ components.loginScreen = `
         <a href="#" class="logo">spck</a>
       <ul class="navlist">
         <li id="redirect-to-home"><a href="#">Home </a></li>
-        <li><a href="#">Music</a></li>
+        <li id="music"><a href="#">Game</a></li>
         <li><a href="#">Dev</a></li>
         <li id="redirect-to-login"><a href="#">Login</a></li>
         <li id="redirect-to-register"><a href="#">Register</a></li>
@@ -79,7 +79,7 @@ components.registerScreen =`
 <a href="#" class="logo">spck</a>
 <ul class="navlist">
   <li id="redirect-to-home"><a href="#">Home </a></li>
-  <li><a href="#">Music</a></li>
+  <li id="music"><a href="#">Music</a></li>
   <li><a href="#">Dev</a></li>
   <li id="redirect-to-login"><a href="#">Login</a></li>
   <li id="redirect-to-register"><a href="#">Register</a></li>
@@ -139,3 +139,31 @@ components.registerScreen =`
   </div>
 </div>
 </header>`
+
+
+components.rmain = `<header>
+<a href="#" class="logo">spck</a>
+<ul class="navlist">
+    <li id="redirect-to-home"><a href="#">Home </a></li>
+    <li id="music"><a href="#">Music</a></li>
+    <li><a href="#">Dev</a></li>
+    <li id="sign-out"><a href="">Sign Out</a></li>
+</ul>
+
+<div class="bx bx-menu" id="menu-icon"></div>
+</header>
+<section class = "hero">
+<div class="hero-text">
+    <h5></h5>
+    <h4>Rip off</h4>
+    <h1>Spotify</h1>
+    <p></p>
+    <a href="" class="ctaa"><i class="ri-headphone-line"></i>Click here to listen</i></a>
+</div>
+<div class="hero-img">
+    <img src="" alt="">
+</div>
+</section>`
+
+components.music = `
+<h1>Music</h1>`
